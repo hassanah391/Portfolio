@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --background: #090817;
+  --foreground: #e4e4e7;
+  --muted: #a1a1aa;
+  --accent: #8b5cf6;
+  --accent-hover: #a78bfa;
+  --card: #18181b;
+  --card-border: #27272a;
+  --gradient-start: #6366f1;
+  --gradient-end: #ec4899;
+  --pointer-x: 50vw;
+  --pointer-y: 42vh;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  background-color: var(--background);
+}
+
+#__next {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+}
+
+#__next > :not(.interactive-background) {
+  position: relative;
+  z-index: 1;
+}
+
+.interactive-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(75, 42, 130, 0.16), transparent 42%),
+    linear-gradient(180deg, #0d0b20 0%, #090817 48%, #070611 100%);
+}
+
+.interactive-background__ambient,
+.interactive-background__dots,
+.interactive-background__spotlight {
+  position: absolute;
+  inset: 0;
+}
+
+.interactive-background__ambient {
+  background: radial-gradient(
+    28rem circle at var(--pointer-x) var(--pointer-y),
+    rgba(124, 58, 237, 0.11),
+    transparent 68%
+  );
+  transition: background 120ms ease-out;
+}
+
+.interactive-background__dots {
+  opacity: 0.2;
+  background-image: radial-gradient(circle, rgba(167, 139, 250, 0.48) 1px, transparent 1.2px);
+  background-size: 38px 38px;
+  background-position: 0 0;
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.8) 65%, transparent 100%);
+}
+
+.interactive-background__spotlight {
+  opacity: 0.92;
+  background-image: radial-gradient(circle, rgba(196, 181, 253, 0.9) 1.2px, transparent 1.5px);
+  background-size: 38px 38px;
+  background-position: 0 0;
+  mask-image: radial-gradient(
+    16rem circle at var(--pointer-x) var(--pointer-y),
+    black 0%,
+    rgba(0, 0, 0, 0.75) 42%,
+    transparent 76%
+  );
+}
+
+@media (max-width: 640px), (pointer: coarse) {
+  .interactive-background__dots {
+    opacity: 0.26;
+    background-size: 30px 30px;
+  }
+
+  .interactive-background__spotlight {
+    opacity: 0.4;
+    background-size: 30px 30px;
+    mask-image: radial-gradient(circle at 50% 24%, black, transparent 58%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interactive-background__ambient {
+    transition: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.glass {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-strong {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  background: rgba(24, 24, 27, 0.8);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes shimmer-gradient {
+  0% {
+    background-position: 100% 0, 0 0;
+  }
+  100% {
+    background-position: -100% 0, 0 0;
+  }
+}
+
+.text-gradient-shimmer {
+  display: inline-block;
+  background-image:
+    linear-gradient(110deg, transparent 45%, rgba(255, 255, 255, 0.7) 50%, transparent 55%),
+    linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  background-size: 200% 100%, 100% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-gradient 3s infinite linear;
+}

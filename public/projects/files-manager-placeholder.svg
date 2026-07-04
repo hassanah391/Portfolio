@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="875" viewBox="0 0 1400 875">
+  <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#4c1d95"/><stop offset="1" stop-color="#be185d"/></linearGradient></defs>
+  <rect width="1400" height="875" fill="url(#g)"/>
+  <path d="M1050 130h210v170h-280V200h70z" fill="#f5d0fe" opacity=".1"/>
+  <rect x="120" y="130" width="1160" height="615" rx="36" fill="#09090b" opacity=".82" stroke="#fff" stroke-opacity=".18"/>
+  <text x="180" y="350" fill="#f5d0fe" font-family="Arial, sans-serif" font-size="34" letter-spacing="8">PROJECT SCREENSHOT</text>
+  <text x="180" y="450" fill="#fff" font-family="Arial, sans-serif" font-size="88" font-weight="700">Files Manager API</text>
+  <text x="180" y="520" fill="#e4e4e7" font-family="Arial, sans-serif" font-size="28">Authenticated file storage with MongoDB and Redis</text>
+</svg>
