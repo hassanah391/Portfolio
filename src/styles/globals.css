@@ -2,13 +2,15 @@
 
 :root {
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --background: #120f27;
+  --background: #0a0812;
   --foreground: #e4e4e7;
   --muted: #a1a1aa;
   --accent: #8b5cf6;
   --accent-hover: #a78bfa;
-  --card: #1d1b29;
-  --card-border: #343044;
+  --card: #211d2c;
+  --card-elevated: #262133;
+  --card-hover: #29233a;
+  --card-border: rgba(139, 92, 246, 0.2);
   --gradient-start: #6366f1;
   --gradient-end: #ec4899;
   --pointer-x: 50vw;
@@ -49,8 +51,8 @@ html {
   overflow: hidden;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 28%, rgba(112, 68, 180, 0.21), transparent 45%),
-    linear-gradient(180deg, #191433 0%, #120f27 48%, #0e0b1f 100%);
+    radial-gradient(circle at 50% 26%, rgba(104, 60, 168, 0.13), transparent 43%),
+    linear-gradient(180deg, #0e0b1c 0%, #0a0812 50%, #08070f 100%);
 }
 
 .interactive-background__ambient,
@@ -63,23 +65,23 @@ html {
 .interactive-background__ambient {
   background: radial-gradient(
     28rem circle at var(--pointer-x) var(--pointer-y),
-    rgba(124, 58, 237, 0.11),
+    rgba(124, 58, 237, 0.075),
     transparent 68%
   );
   transition: background 120ms ease-out;
 }
 
 .interactive-background__dots {
-  opacity: 0.2;
-  background-image: radial-gradient(circle, rgba(167, 139, 250, 0.48) 1px, transparent 1.2px);
+  opacity: 0.16;
+  background-image: radial-gradient(circle, rgba(167, 139, 250, 0.4) 1px, transparent 1.2px);
   background-size: 38px 38px;
   background-position: 0 0;
   mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.8) 65%, transparent 100%);
 }
 
 .interactive-background__spotlight {
-  opacity: 0.92;
-  background-image: radial-gradient(circle, rgba(196, 181, 253, 0.9) 1.2px, transparent 1.5px);
+  opacity: 0.68;
+  background-image: radial-gradient(circle, rgba(196, 181, 253, 0.76) 1.2px, transparent 1.5px);
   background-size: 38px 38px;
   background-position: 0 0;
   mask-image: radial-gradient(
@@ -92,12 +94,12 @@ html {
 
 @media (max-width: 640px), (pointer: coarse) {
   .interactive-background__dots {
-    opacity: 0.26;
+    opacity: 0.2;
     background-size: 30px 30px;
   }
 
   .interactive-background__spotlight {
-    opacity: 0.4;
+    opacity: 0.3;
     background-size: 30px 30px;
     mask-image: radial-gradient(circle at 50% 24%, black, transparent 58%);
   }

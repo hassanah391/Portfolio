@@ -63,7 +63,7 @@ export default function LinksPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: 0.1 + index * 0.08 }}
                 whileHover={{ scale: 1.015, y: -2 }}
-                className="group flex items-center justify-between rounded-3xl border border-(--card-border) bg-(--card)/70 p-5 shadow-lg shadow-black/10 backdrop-blur-sm transition-colors hover:border-blue-500/50 sm:p-7"
+                className="group flex items-center justify-between rounded-3xl border border-(--card-border) bg-(--card)/90 p-5 shadow-lg shadow-black/10 backdrop-blur-sm transition-colors hover:border-blue-500/50 hover:bg-(--card-hover) sm:p-7"
               >
                 <span className="flex items-center gap-5">
                   <span className="flex h-14 w-14 items-center justify-center rounded-2xl border-2 border-blue-500 text-blue-400 sm:h-16 sm:w-16">

@@ -44,7 +44,7 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-70px" }}
             transition={{ duration: 0.4, delay: index * 0.08 }}
-            className="rounded-2xl border border-(--card-border) bg-linear-to-br from-(--card) to-(--card-border) p-6 transition-colors hover:border-violet-400/40"
+            className="rounded-2xl border border-(--card-border) bg-linear-to-br from-(--card) to-(--card-elevated) p-6 transition-colors hover:border-violet-400/40 hover:from-(--card-hover) hover:to-(--card-elevated)"
           >
             <span className="font-mono text-xs text-violet-300">{principle.number}</span>
             <h3 className="mt-4 text-xl font-bold">{principle.title}</h3>

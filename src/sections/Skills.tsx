@@ -65,7 +65,7 @@ export function Skills() {
           {skillGroups.map((group) => (
             <div
               key={group.title}
-              className="rounded-2xl border border-(--card-border) bg-linear-to-br from-(--card) to-(--card-border) p-5"
+              className="rounded-2xl border border-(--card-border) bg-linear-to-br from-(--card) to-(--card-elevated) p-5"
             >
               <h3 className="text-base font-semibold">{group.title}</h3>
               <ul className="mt-4 flex flex-wrap gap-2 text-sm text-(--muted)">
@@ -82,7 +82,7 @@ export function Skills() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-(--card-border) bg-(--card)/40 py-3">
+        <div className="mt-8 rounded-2xl border border-(--card-border) bg-(--card)/85 py-3">
           <div className="relative overflow-hidden">
             <motion.div
               className="flex w-max items-center gap-8 whitespace-nowrap"

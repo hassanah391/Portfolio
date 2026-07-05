@@ -148,7 +148,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         ))}
       </footer>
 
-      <ul className="mt-5 space-y-2 rounded-2xl border border-(--card-border) bg-(--card)/65 p-4">
+      <ul className="mt-5 space-y-2 rounded-2xl border border-(--card-border) bg-(--card)/90 p-4 transition-colors group-hover:bg-(--card-hover)">
         {project.highlights.map((highlight) => (
           <li key={highlight} className="flex gap-2.5 text-xs leading-relaxed text-(--muted) sm:text-sm">
             <CheckCircle2 size={15} className="mt-0.5 shrink-0 text-violet-300" />
