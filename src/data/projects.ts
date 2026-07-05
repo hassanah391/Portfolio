@@ -13,6 +13,7 @@ export interface Project {
   deviceType: "desktop" | "mobile";
   bgColor?: string;
   screenshots?: string[];
+  screenshotFit?: "cover" | "contain";
 }
 
 export const projects: Project[] = [
@@ -23,20 +24,21 @@ export const projects: Project[] = [
       "Full-stack fashion platform for products, AI-generated templates, community content, and multi-role dashboards.",
     tags: ["ASP.NET Core", "Angular", "SQL Server", "AI"],
     highlights: [
+      "ASP.NET Core integration with an external AI generation pipeline",
       "30+ REST endpoints across user, printer, and admin workflows",
       "Role-based authorization, pagination, and soft-delete filtering",
-      "ASP.NET Core integration with an external AI generation pipeline",
     ],
     github: "https://github.com/FatmaAli111/ITIGraduationProject",
     video: "/proof/atlier-demo.mp4",
     linkedIn:
       "https://www.linkedin.com/posts/hassanah391_softwareengineering-dotnet-angular-ugcPost-7477424318491160577--7z0/",
     featured: true,
-    projectType: "Full-stack platform",
+    projectType: "ITI Graduation Project · AI Fashion Platform",
     deviceType: "desktop",
     bgColor: "bg-linear-to-br from-violet-500/90 to-fuchsia-500/90",
     // TODO: Replace with a real Atlier product screenshot.
-    screenshots: ["/projects/atlier-placeholder.svg"],
+    screenshots: ["/projects/atlier.png"],
+    screenshotFit: "contain",
   },
   {
     id: "smart-trip-cost-analyzer",
@@ -58,7 +60,8 @@ export const projects: Project[] = [
     deviceType: "desktop",
     bgColor: "bg-linear-to-br from-blue-500/90 to-cyan-500/90",
     // TODO: Replace with a real Smart Trip Cost Analyzer screenshot.
-    screenshots: ["/projects/smart-trip-placeholder.svg"],
+    screenshots: ["/projects/smart-trip.png"],
+    screenshotFit: "contain",
   },
   {
     id: "hospital-management-system",
@@ -78,7 +81,7 @@ export const projects: Project[] = [
     deviceType: "desktop",
     bgColor: "bg-linear-to-br from-emerald-500/90 to-teal-500/90",
     // TODO: Replace with a real Hospital Management System screenshot.
-    screenshots: ["/projects/hospital-placeholder.svg"],
+    screenshots: ["/projects/hospital-system.png"],
   },
   {
     id: "files-manager",

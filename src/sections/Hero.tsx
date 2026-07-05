@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="section relative flex min-h-[100svh] items-center overflow-hidden pb-32 pt-24 sm:pt-32 lg:min-h-[112vh]"
+      className="section relative flex min-h-[100svh] items-center pb-32 pt-24 sm:pt-32 lg:min-h-[112vh]"
     >
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-28 -left-20 h-72 w-72 rounded-full bg-violet-500/20 blur-3xl" />

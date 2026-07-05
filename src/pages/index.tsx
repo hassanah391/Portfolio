@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Hassan Ahmed Teleb | Full Stack Developer (.NET)</title>
+        <title>Hassan A. Teleb | Full Stack Developer (.NET)</title>
         <meta
           name="description"
           content="Full-stack .NET developer building reliable APIs, dashboards, and practical business systems with ASP.NET Core, Angular, and SQL Server."

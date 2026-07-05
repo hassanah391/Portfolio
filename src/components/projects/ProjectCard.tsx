@@ -118,7 +118,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                           src={screenshots[0]}
                           alt="App screenshot"
                           fill
-                          className="object-cover object-top"
+                          className={cn(
+                            "object-top",
+                            project.screenshotFit === "contain"
+                              ? "object-contain"
+                              : "object-cover"
+                          )}
                           sizes="(max-width: 768px) 90vw, 50vw"
                           priority={index === 0}
                         />

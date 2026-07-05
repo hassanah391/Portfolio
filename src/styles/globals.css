@@ -2,13 +2,13 @@
 
 :root {
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --background: #090817;
+  --background: #120f27;
   --foreground: #e4e4e7;
   --muted: #a1a1aa;
   --accent: #8b5cf6;
   --accent-hover: #a78bfa;
-  --card: #18181b;
-  --card-border: #27272a;
+  --card: #1d1b29;
+  --card-border: #343044;
   --gradient-start: #6366f1;
   --gradient-end: #ec4899;
   --pointer-x: 50vw;
@@ -49,8 +49,8 @@ html {
   overflow: hidden;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 28%, rgba(75, 42, 130, 0.16), transparent 42%),
-    linear-gradient(180deg, #0d0b20 0%, #090817 48%, #070611 100%);
+    radial-gradient(circle at 50% 28%, rgba(112, 68, 180, 0.21), transparent 45%),
+    linear-gradient(180deg, #191433 0%, #120f27 48%, #0e0b1f 100%);
 }
 
 .interactive-background__ambient,
